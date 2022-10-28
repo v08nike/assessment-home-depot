@@ -1,0 +1,18 @@
+On the backend side, I implemented 3 APIs according to our requirements.
+1. GET: /cars
+2. GET: /cars/{id}
+3. POST: /cars/{id}
+
+The application has three pages: a car listing page (first page), a view car information page, and a new car addition page.
+
+The first page (the car listing page) has two events and one request.
+- Get all data from backend and display it.
+- When the user clicks the Add button, they are taken to the Add New Car page.
+- When the user clicks the view button, it moves to the vehicle information view page.
+
+On the View Vehicle Information page:
+- Get data according to selected id from backend and display it.
+
+On the Add New Car page:
+- User can add new car information
+- After adding vehicle information, go to the first page.
