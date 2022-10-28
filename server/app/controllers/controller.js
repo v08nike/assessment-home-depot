@@ -13,7 +13,7 @@ exports.addNew = (req, res) => {
     category: req.body.category,
     mileage: req.body.mileage,
     price: req.body.price,
-    id : req.params.id
+    carId : req.params.id
   });
 
   // Save Cars in the database
@@ -48,11 +48,11 @@ exports.findAll = (req, res) => {
 exports.findById = (req, res) => {
   const id = req.params.id;
 
-  Cars.find({id})
+  Cars.find({id: id})
     .then(data => {
       if (!data)
         res.status(404).send({ message: "Not found Cars with id " + id });
-      else res.send(data);
+      else res.send(data[0]);
     })
     .catch(err => {
       res
